@@ -7,7 +7,7 @@ const Tab2: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 2</IonTitle>
+          <IonTitle style={{textAlign:"center"}}>Agregar tarea</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
