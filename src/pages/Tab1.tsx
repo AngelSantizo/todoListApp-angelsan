@@ -1,6 +1,7 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonCard, IonCardHeader, IonCardTitle, IonContent, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
+import { checkmarkCircleOutline, closeOutline, returnDownBackOutline } from 'ionicons/icons';
 
 const Tab1: React.FC = () => {
   return (
@@ -12,11 +13,50 @@ const Tab1: React.FC = () => {
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
-          </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+        <IonCard>
+          <IonCardHeader>
+            <IonCardTitle>Pendientes</IonCardTitle>
+          </IonCardHeader>
+          <IonList>
+              <IonItem>
+                <IonIcon slot="end" icon={closeOutline}></IonIcon>
+                <IonIcon slot="end" icon={checkmarkCircleOutline}></IonIcon>
+                <IonLabel>Item 1</IonLabel>
+              </IonItem>
+              <IonItem>
+                <IonIcon slot="end" icon={closeOutline}></IonIcon>
+                <IonIcon slot="end" icon={checkmarkCircleOutline}></IonIcon>
+                <IonLabel>Item 2</IonLabel>
+              </IonItem>
+              <IonItem>
+                <IonIcon slot="end" icon={closeOutline}></IonIcon>
+                <IonIcon slot="end" icon={checkmarkCircleOutline}></IonIcon>
+                <IonLabel>Item 3</IonLabel>
+              </IonItem>
+          </IonList>
+        </IonCard>
+        
+
+        <IonCard>
+          <IonCardHeader>
+            <IonCardTitle>Completados</IonCardTitle>
+          </IonCardHeader>
+          <IonList>
+              <IonItem>
+                <IonIcon slot="end" icon={returnDownBackOutline}></IonIcon>
+                <IonLabel>Item 1</IonLabel>
+              </IonItem>
+              <IonItem>
+                <IonIcon slot="end" icon={returnDownBackOutline}></IonIcon>
+                <IonLabel>Item 2</IonLabel>
+              </IonItem>
+              <IonItem>
+                <IonIcon slot="end" icon={returnDownBackOutline}></IonIcon>
+                <IonLabel>Item 3</IonLabel>
+              </IonItem>
+          </IonList>
+        </IonCard>
       </IonContent>
     </IonPage>
   );
