@@ -25,7 +25,7 @@ const Tab2: React.FC = () => {
     setCategory('Trabajo');
     
     // Navigate back to Tab1
-    router.push('/tabs/tab1');
+    router.push('/tab1');
   };
 
   return (
